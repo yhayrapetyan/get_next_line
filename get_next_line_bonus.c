@@ -6,7 +6,7 @@
 /*   By: yuhayrap <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/20 13:18:01 by yuhayrap          #+#    #+#             */
-/*   Updated: 2024/01/20 13:18:04 by yuhayrap         ###   ########.fr       */
+/*   Updated: 2024/02/14 16:25:40 by yuhayrap         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ static char	*get_left_str(int fd, char *left_str)
 
 char	*get_next_line(int fd)
 {
-	static char	*left_str[4864];
+	static char	*left_str[OPEN_MAX];
 	char		*line;
 
 	if (fd < 0 || BUFFER_SIZE <= 0)

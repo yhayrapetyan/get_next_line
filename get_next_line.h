@@ -10,17 +10,15 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-
 #ifndef GET_NEXT_LINE_H
 # define GET_NEXT_LINE_H
 
-#ifndef BUFFER_SIZE
-# define BUFFER_SIZE 1
-#endif
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 1
+# endif
 
 # include <stdlib.h>
 # include <unistd.h>
-# include <stdio.h> ///////delete
 # include <fcntl.h>
 
 char	*get_next_line(int fd);
@@ -31,4 +29,3 @@ char	*get_new_left_str(char *str);
 int		ft_strlen(char *s);
 
 #endif
-
