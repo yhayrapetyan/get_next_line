@@ -41,8 +41,12 @@ char	*get_next_line(int fd)
 	static char	*left_str[OPEN_MAX];
 	char		*line;
 
-	if (fd < 0 || BUFFER_SIZE <= 0)
+	if (fd < 0 || BUFFER_SIZE <= 0 || read(fd, 0, 0) < 0)
+	{
+		free(left_str[fd]);
+		left_str[fd] = NULL;
 		return (0);
+	}
 	left_str[fd] = get_left_str(fd, left_str[fd]);
 	if (!left_str[fd])
 		return (NULL);
